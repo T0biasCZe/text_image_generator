@@ -23,14 +23,14 @@
 		///  the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			label1 = new Label();
-			label2 = new Label();
-			label3 = new Label();
-			label4 = new Label();
-			label5 = new Label();
-			button1 = new Button();
-			label6 = new Label();
-			label7 = new Label();
+			label1 = new LabelEx();
+			label2 = new LabelEx();
+			label3 = new LabelEx();
+			label4 = new LabelEx();
+			label5 = new LabelEx();
+			button_start = new Button();
+			label6 = new LabelEx();
+			label7 = new LabelEx();
 			panel1 = new Panel();
 			radioButton7 = new RadioButton();
 			panel_textcolour = new Panel();
@@ -38,38 +38,52 @@
 			radioButton_textcolour_custom = new RadioButton();
 			radioButton_textcolour_randomplus = new RadioButton();
 			radioButton_textcolour_random = new RadioButton();
-			resolution_width = new NumericUpDown();
-			resolution_height = new NumericUpDown();
+			numericUpDown_width = new NumericUpDown();
+			numericUpDown_height = new NumericUpDown();
 			fontDialog1 = new FontDialog();
-			textBox_fonttype = new TextBox();
+			textBox_fonttype = new TextBoxEx();
 			panel_bkgcolour = new Panel();
 			button_bkgcolour = new Button();
 			radioButton_bkgcolour_custom = new RadioButton();
 			radioButton_bkgcolour_randomplus = new RadioButton();
 			radioButton_bkgcolour_random = new RadioButton();
-			label8 = new Label();
+			label8 = new LabelEx();
 			colorDialog1 = new ColorDialog();
 			numericUpDown_imagecount = new NumericUpDown();
-			textBox_outputfolder = new TextBox();
+			textBox_outputfolder = new TextBoxEx();
 			button_filepicker = new Button();
 			numericUpDown_starti = new NumericUpDown();
-			label9 = new Label();
+			label9 = new LabelEx();
 			numericUpDown_delay = new NumericUpDown();
-			label10 = new Label();
+			label10 = new LabelEx();
 			folderBrowserDialog1 = new FolderBrowserDialog();
 			panel2 = new Panel();
+			radioButton_text_grayscale = new RadioButton();
 			radioButton_text_pixelated = new RadioButton();
 			radioButton_text_system = new RadioButton();
-			label11 = new Label();
+			label11 = new LabelEx();
+			button_batch = new Button();
+			trackBar1 = new TrackBar();
+			labelEx1 = new LabelEx();
+			labelEx2 = new LabelEx();
+			labelEx_trackbar_value = new LabelEx();
+			trackBar_labelcount_min = new TrackBar();
+			trackBar_labelcount_max = new TrackBar();
+			labelEx_trackbar_value_min = new LabelEx();
+			labelEx_trackbar_value_max = new LabelEx();
+			labelEx3 = new LabelEx();
 			panel1.SuspendLayout();
 			panel_textcolour.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)resolution_width).BeginInit();
-			((System.ComponentModel.ISupportInitialize)resolution_height).BeginInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown_width).BeginInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown_height).BeginInit();
 			panel_bkgcolour.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)numericUpDown_imagecount).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numericUpDown_starti).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numericUpDown_delay).BeginInit();
 			panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)trackBar_labelcount_min).BeginInit();
+			((System.ComponentModel.ISupportInitialize)trackBar_labelcount_max).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -88,11 +102,11 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Public Pixel", 13F, FontStyle.Regular, GraphicsUnit.Pixel);
+			label2.Font = new Font("Public Pixel", 12F, FontStyle.Regular, GraphicsUnit.Pixel);
 			label2.ForeColor = Color.White;
 			label2.Location = new Point(24, 48);
 			label2.Name = "label2";
-			label2.Size = new Size(150, 13);
+			label2.Size = new Size(137, 12);
 			label2.TabIndex = 1;
 			label2.Text = "resolution:";
 			// 
@@ -129,19 +143,19 @@
 			label5.TabIndex = 4;
 			label5.Text = "number of images:";
 			// 
-			// button1
+			// button_start
 			// 
-			button1.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
-			button1.FlatAppearance.BorderSize = 3;
-			button1.FlatStyle = FlatStyle.Popup;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(32, 416);
-			button1.Name = "button1";
-			button1.Size = new Size(128, 32);
-			button1.TabIndex = 5;
-			button1.Text = "START";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click;
+			button_start.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+			button_start.FlatAppearance.BorderSize = 3;
+			button_start.FlatStyle = FlatStyle.Popup;
+			button_start.ForeColor = Color.White;
+			button_start.Location = new Point(32, 416);
+			button_start.Name = "button_start";
+			button_start.Size = new Size(128, 32);
+			button_start.TabIndex = 5;
+			button_start.Text = "START";
+			button_start.UseVisualStyleBackColor = true;
+			button_start.Click += button1_Click;
 			// 
 			// label6
 			// 
@@ -201,8 +215,8 @@
 			// button_textcolour
 			// 
 			button_textcolour.BackColor = Color.White;
-			button_textcolour.Font = new Font("Public Pixel", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			button_textcolour.Location = new Point(328, 4);
+			button_textcolour.Font = new Font("Public Pixel", 8F, FontStyle.Regular, GraphicsUnit.Point);
+			button_textcolour.Location = new Point(328, 0);
 			button_textcolour.Name = "button_textcolour";
 			button_textcolour.Size = new Size(88, 23);
 			button_textcolour.TabIndex = 14;
@@ -250,29 +264,29 @@
 			radioButton_textcolour_random.Text = "random";
 			radioButton_textcolour_random.UseVisualStyleBackColor = true;
 			// 
-			// resolution_width
+			// numericUpDown_width
 			// 
-			resolution_width.Location = new Point(176, 40);
-			resolution_width.Margin = new Padding(8, 4, 8, 4);
-			resolution_width.Maximum = new decimal(new int[] { 3840, 0, 0, 0 });
-			resolution_width.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
-			resolution_width.Name = "resolution_width";
-			resolution_width.Size = new Size(96, 26);
-			resolution_width.TabIndex = 0;
-			resolution_width.ThousandsSeparator = true;
-			resolution_width.Value = new decimal(new int[] { 928, 0, 0, 0 });
+			numericUpDown_width.Font = new Font("Public Pixel", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+			numericUpDown_width.Location = new Point(176, 40);
+			numericUpDown_width.Margin = new Padding(8, 4, 8, 4);
+			numericUpDown_width.Maximum = new decimal(new int[] { 3840, 0, 0, 0 });
+			numericUpDown_width.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
+			numericUpDown_width.Name = "numericUpDown_width";
+			numericUpDown_width.Size = new Size(96, 23);
+			numericUpDown_width.TabIndex = 0;
+			numericUpDown_width.Value = new decimal(new int[] { 1856, 0, 0, 0 });
 			// 
-			// resolution_height
+			// numericUpDown_height
 			// 
-			resolution_height.Location = new Point(288, 40);
-			resolution_height.Margin = new Padding(8, 4, 8, 4);
-			resolution_height.Maximum = new decimal(new int[] { 2160, 0, 0, 0 });
-			resolution_height.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
-			resolution_height.Name = "resolution_height";
-			resolution_height.Size = new Size(96, 26);
-			resolution_height.TabIndex = 10;
-			resolution_height.ThousandsSeparator = true;
-			resolution_height.Value = new decimal(new int[] { 576, 0, 0, 0 });
+			numericUpDown_height.Font = new Font("Public Pixel", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+			numericUpDown_height.Location = new Point(288, 40);
+			numericUpDown_height.Margin = new Padding(8, 4, 8, 4);
+			numericUpDown_height.Maximum = new decimal(new int[] { 2160, 0, 0, 0 });
+			numericUpDown_height.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
+			numericUpDown_height.Name = "numericUpDown_height";
+			numericUpDown_height.Size = new Size(96, 23);
+			numericUpDown_height.TabIndex = 10;
+			numericUpDown_height.Value = new decimal(new int[] { 1152, 0, 0, 0 });
 			// 
 			// textBox_fonttype
 			// 
@@ -297,9 +311,9 @@
 			// button_bkgcolour
 			// 
 			button_bkgcolour.BackColor = Color.FromArgb(0, 128, 255);
-			button_bkgcolour.Font = new Font("Public Pixel", 9F, FontStyle.Regular, GraphicsUnit.Point);
+			button_bkgcolour.Font = new Font("Public Pixel", 8F, FontStyle.Regular, GraphicsUnit.Point);
 			button_bkgcolour.ForeColor = Color.White;
-			button_bkgcolour.Location = new Point(328, 4);
+			button_bkgcolour.Location = new Point(328, 0);
 			button_bkgcolour.Name = "button_bkgcolour";
 			button_bkgcolour.Size = new Size(88, 23);
 			button_bkgcolour.TabIndex = 15;
@@ -360,11 +374,12 @@
 			// 
 			// numericUpDown_imagecount
 			// 
-			numericUpDown_imagecount.Location = new Point(256, 202);
+			numericUpDown_imagecount.Font = new Font("Public Pixel", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+			numericUpDown_imagecount.Location = new Point(256, 200);
 			numericUpDown_imagecount.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
 			numericUpDown_imagecount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			numericUpDown_imagecount.Name = "numericUpDown_imagecount";
-			numericUpDown_imagecount.Size = new Size(120, 26);
+			numericUpDown_imagecount.Size = new Size(120, 23);
 			numericUpDown_imagecount.TabIndex = 14;
 			numericUpDown_imagecount.Value = new decimal(new int[] { 10, 0, 0, 0 });
 			// 
@@ -389,10 +404,11 @@
 			// 
 			// numericUpDown_starti
 			// 
-			numericUpDown_starti.Location = new Point(496, 202);
+			numericUpDown_starti.Font = new Font("Public Pixel", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+			numericUpDown_starti.Location = new Point(496, 200);
 			numericUpDown_starti.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
 			numericUpDown_starti.Name = "numericUpDown_starti";
-			numericUpDown_starti.Size = new Size(120, 26);
+			numericUpDown_starti.Size = new Size(120, 23);
 			numericUpDown_starti.TabIndex = 18;
 			// 
 			// label9
@@ -408,11 +424,12 @@
 			// 
 			// numericUpDown_delay
 			// 
+			numericUpDown_delay.Font = new Font("Public Pixel", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
 			numericUpDown_delay.Location = new Point(112, 320);
 			numericUpDown_delay.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
 			numericUpDown_delay.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
 			numericUpDown_delay.Name = "numericUpDown_delay";
-			numericUpDown_delay.Size = new Size(120, 26);
+			numericUpDown_delay.Size = new Size(120, 23);
 			numericUpDown_delay.TabIndex = 20;
 			numericUpDown_delay.Value = new decimal(new int[] { 34, 0, 0, 0 });
 			// 
@@ -429,12 +446,26 @@
 			// 
 			// panel2
 			// 
+			panel2.Controls.Add(radioButton_text_grayscale);
 			panel2.Controls.Add(radioButton_text_pixelated);
 			panel2.Controls.Add(radioButton_text_system);
 			panel2.Location = new Point(184, 360);
 			panel2.Name = "panel2";
-			panel2.Size = new Size(432, 32);
+			panel2.Size = new Size(600, 32);
 			panel2.TabIndex = 22;
+			// 
+			// radioButton_text_grayscale
+			// 
+			radioButton_text_grayscale.AutoSize = true;
+			radioButton_text_grayscale.Font = new Font("Public Pixel", 9F, FontStyle.Regular, GraphicsUnit.Point);
+			radioButton_text_grayscale.ForeColor = Color.White;
+			radioButton_text_grayscale.Location = new Point(328, 8);
+			radioButton_text_grayscale.Name = "radioButton_text_grayscale";
+			radioButton_text_grayscale.Size = new Size(131, 16);
+			radioButton_text_grayscale.TabIndex = 2;
+			radioButton_text_grayscale.Text = "Grayscale";
+			radioButton_text_grayscale.UseVisualStyleBackColor = true;
+			radioButton_text_grayscale.CheckedChanged += radioButton_text_system_CheckedChanged;
 			// 
 			// radioButton_text_pixelated
 			// 
@@ -442,13 +473,14 @@
 			radioButton_text_pixelated.Checked = true;
 			radioButton_text_pixelated.Font = new Font("Public Pixel", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			radioButton_text_pixelated.ForeColor = Color.White;
-			radioButton_text_pixelated.Location = new Point(208, 8);
+			radioButton_text_pixelated.Location = new Point(144, 8);
 			radioButton_text_pixelated.Name = "radioButton_text_pixelated";
-			radioButton_text_pixelated.Size = new Size(83, 16);
+			radioButton_text_pixelated.Size = new Size(179, 16);
 			radioButton_text_pixelated.TabIndex = 1;
 			radioButton_text_pixelated.TabStop = true;
-			radioButton_text_pixelated.Text = "pixel";
+			radioButton_text_pixelated.Text = "Pixel Perfect";
 			radioButton_text_pixelated.UseVisualStyleBackColor = true;
+			radioButton_text_pixelated.CheckedChanged += radioButton_text_system_CheckedChanged;
 			// 
 			// radioButton_text_system
 			// 
@@ -457,9 +489,9 @@
 			radioButton_text_system.ForeColor = Color.White;
 			radioButton_text_system.Location = new Point(8, 8);
 			radioButton_text_system.Name = "radioButton_text_system";
-			radioButton_text_system.Size = new Size(191, 16);
+			radioButton_text_system.Size = new Size(131, 16);
 			radioButton_text_system.TabIndex = 0;
-			radioButton_text_system.Text = "system default";
+			radioButton_text_system.Text = "ClearType";
 			radioButton_text_system.UseVisualStyleBackColor = true;
 			radioButton_text_system.CheckedChanged += radioButton_text_system_CheckedChanged;
 			// 
@@ -474,12 +506,139 @@
 			label11.TabIndex = 21;
 			label11.Text = "text render:";
 			// 
+			// button_batch
+			// 
+			button_batch.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+			button_batch.FlatAppearance.BorderSize = 3;
+			button_batch.FlatStyle = FlatStyle.Popup;
+			button_batch.ForeColor = Color.White;
+			button_batch.Location = new Point(176, 416);
+			button_batch.Name = "button_batch";
+			button_batch.Size = new Size(128, 32);
+			button_batch.TabIndex = 23;
+			button_batch.Text = "BATCH";
+			button_batch.UseVisualStyleBackColor = true;
+			button_batch.Click += button_batch_Click;
+			// 
+			// trackBar1
+			// 
+			trackBar1.Location = new Point(632, 144);
+			trackBar1.Maximum = 95;
+			trackBar1.Minimum = 50;
+			trackBar1.Name = "trackBar1";
+			trackBar1.Size = new Size(152, 45);
+			trackBar1.TabIndex = 24;
+			trackBar1.TickFrequency = 5;
+			trackBar1.Value = 50;
+			trackBar1.ValueChanged += trackBar1_ValueChanged;
+			// 
+			// labelEx1
+			// 
+			labelEx1.AutoSize = true;
+			labelEx1.Font = new Font("Public Pixel", 13F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx1.ForeColor = Color.White;
+			labelEx1.Location = new Point(640, 104);
+			labelEx1.Name = "labelEx1";
+			labelEx1.Size = new Size(137, 13);
+			labelEx1.TabIndex = 25;
+			labelEx1.Text = "rand++ min";
+			// 
+			// labelEx2
+			// 
+			labelEx2.AutoSize = true;
+			labelEx2.Font = new Font("Public Pixel", 13F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx2.ForeColor = Color.White;
+			labelEx2.Location = new Point(640, 120);
+			labelEx2.Name = "labelEx2";
+			labelEx2.Size = new Size(111, 13);
+			labelEx2.TabIndex = 26;
+			labelEx2.Text = "contrast";
+			// 
+			// labelEx_trackbar_value
+			// 
+			labelEx_trackbar_value.AutoSize = true;
+			labelEx_trackbar_value.Font = new Font("Public Pixel", 8F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx_trackbar_value.ForeColor = Color.White;
+			labelEx_trackbar_value.Location = new Point(696, 176);
+			labelEx_trackbar_value.Name = "labelEx_trackbar_value";
+			labelEx_trackbar_value.Size = new Size(28, 8);
+			labelEx_trackbar_value.TabIndex = 29;
+			labelEx_trackbar_value.Text = "0,5";
+			// 
+			// trackBar_labelcount_min
+			// 
+			trackBar_labelcount_min.LargeChange = 10;
+			trackBar_labelcount_min.Location = new Point(632, 232);
+			trackBar_labelcount_min.Maximum = 100;
+			trackBar_labelcount_min.Minimum = 1;
+			trackBar_labelcount_min.Name = "trackBar_labelcount_min";
+			trackBar_labelcount_min.Size = new Size(152, 45);
+			trackBar_labelcount_min.TabIndex = 30;
+			trackBar_labelcount_min.TickFrequency = 10;
+			trackBar_labelcount_min.Value = 20;
+			trackBar_labelcount_min.ValueChanged += trackBar_labelcount_min_ValueChanged;
+			// 
+			// trackBar_labelcount_max
+			// 
+			trackBar_labelcount_max.Location = new Point(632, 272);
+			trackBar_labelcount_max.Maximum = 100;
+			trackBar_labelcount_max.Minimum = 1;
+			trackBar_labelcount_max.Name = "trackBar_labelcount_max";
+			trackBar_labelcount_max.Size = new Size(152, 45);
+			trackBar_labelcount_max.TabIndex = 31;
+			trackBar_labelcount_max.TickFrequency = 10;
+			trackBar_labelcount_max.Value = 30;
+			trackBar_labelcount_max.ValueChanged += trackBar_labelcount_max_ValueChanged;
+			// 
+			// labelEx_trackbar_value_min
+			// 
+			labelEx_trackbar_value_min.AutoSize = true;
+			labelEx_trackbar_value_min.Font = new Font("Public Pixel", 8F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx_trackbar_value_min.ForeColor = Color.White;
+			labelEx_trackbar_value_min.Location = new Point(660, 264);
+			labelEx_trackbar_value_min.Name = "labelEx_trackbar_value_min";
+			labelEx_trackbar_value_min.Size = new Size(20, 8);
+			labelEx_trackbar_value_min.TabIndex = 32;
+			labelEx_trackbar_value_min.Text = "20";
+			// 
+			// labelEx_trackbar_value_max
+			// 
+			labelEx_trackbar_value_max.AutoSize = true;
+			labelEx_trackbar_value_max.Font = new Font("Public Pixel", 8F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx_trackbar_value_max.ForeColor = Color.White;
+			labelEx_trackbar_value_max.Location = new Point(668, 304);
+			labelEx_trackbar_value_max.Name = "labelEx_trackbar_value_max";
+			labelEx_trackbar_value_max.Size = new Size(20, 8);
+			labelEx_trackbar_value_max.TabIndex = 33;
+			labelEx_trackbar_value_max.Text = "30";
+			// 
+			// labelEx3
+			// 
+			labelEx3.AutoSize = true;
+			labelEx3.Font = new Font("Public Pixel", 13F, FontStyle.Regular, GraphicsUnit.Pixel);
+			labelEx3.ForeColor = Color.White;
+			labelEx3.Location = new Point(640, 216);
+			labelEx3.Name = "labelEx3";
+			labelEx3.Size = new Size(150, 13);
+			labelEx3.TabIndex = 34;
+			labelEx3.Text = "label count";
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(19F, 19F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(128, 128, 255);
-			ClientSize = new Size(799, 476);
+			ClientSize = new Size(791, 476);
+			Controls.Add(labelEx3);
+			Controls.Add(labelEx_trackbar_value_max);
+			Controls.Add(labelEx_trackbar_value_min);
+			Controls.Add(trackBar_labelcount_max);
+			Controls.Add(trackBar_labelcount_min);
+			Controls.Add(labelEx_trackbar_value);
+			Controls.Add(labelEx2);
+			Controls.Add(labelEx1);
+			Controls.Add(trackBar1);
+			Controls.Add(button_batch);
 			Controls.Add(panel2);
 			Controls.Add(label11);
 			Controls.Add(numericUpDown_delay);
@@ -492,13 +651,13 @@
 			Controls.Add(panel_bkgcolour);
 			Controls.Add(label8);
 			Controls.Add(textBox_fonttype);
-			Controls.Add(resolution_height);
-			Controls.Add(resolution_width);
+			Controls.Add(numericUpDown_height);
+			Controls.Add(numericUpDown_width);
 			Controls.Add(panel_textcolour);
 			Controls.Add(panel1);
 			Controls.Add(label7);
 			Controls.Add(label6);
-			Controls.Add(button1);
+			Controls.Add(button_start);
 			Controls.Add(label5);
 			Controls.Add(label4);
 			Controls.Add(label3);
@@ -508,12 +667,13 @@
 			Margin = new Padding(8, 4, 8, 4);
 			Name = "Form1";
 			Text = "Form1";
+			Load += Form1_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			panel_textcolour.ResumeLayout(false);
 			panel_textcolour.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)resolution_width).EndInit();
-			((System.ComponentModel.ISupportInitialize)resolution_height).EndInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown_width).EndInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown_height).EndInit();
 			panel_bkgcolour.ResumeLayout(false);
 			panel_bkgcolour.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)numericUpDown_imagecount).EndInit();
@@ -521,26 +681,28 @@
 			((System.ComponentModel.ISupportInitialize)numericUpDown_delay).EndInit();
 			panel2.ResumeLayout(false);
 			panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+			((System.ComponentModel.ISupportInitialize)trackBar_labelcount_min).EndInit();
+			((System.ComponentModel.ISupportInitialize)trackBar_labelcount_max).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
 
-		private Label label1;
-		private Label label2;
-		private Label label3;
-		private Label label4;
-		private Label label5;
-		private Button button1;
-		private Label label6;
-		private Label label7;
+		private LabelEx label1;
+		private LabelEx label2;
+		private LabelEx label3;
+		private LabelEx label4;
+		private LabelEx label5;
+		private Button button_start;
+		private LabelEx label6;
+		private LabelEx label7;
 		private Panel panel1;
 		private Panel panel_textcolour;
-		private NumericUpDown resolution_width;
-		private NumericUpDown resolution_height;
+		private NumericUpDown numericUpDown_width;
+		private NumericUpDown numericUpDown_height;
 		private FontDialog fontDialog1;
-		private TextBox textBox_fonttype;
 		private Button button_textcolour;
 		private RadioButton radioButton_textcolour_custom;
 		private RadioButton radioButton2;
@@ -550,21 +712,33 @@
 		private RadioButton radioButton_bkgcolour_custom;
 		private RadioButton radioButton_bkgcolour_randomplus;
 		private RadioButton radioButton_bkgcolour_random;
-		private Label label8;
+		private LabelEx label8;
 		private ColorDialog colorDialog1;
 		private NumericUpDown numericUpDown_imagecount;
-		private TextBox textBox_outputfolder;
 		private Button button_filepicker;
 		private RadioButton radioButton7;
 		private NumericUpDown numericUpDown_starti;
-		private Label label9;
+		private LabelEx label9;
 		private RadioButton radioButton_textcolour_randomplus;
 		private NumericUpDown numericUpDown_delay;
-		private Label label10;
+		private LabelEx label10;
 		private FolderBrowserDialog folderBrowserDialog1;
 		private Panel panel2;
 		private RadioButton radioButton_text_pixelated;
 		private RadioButton radioButton_text_system;
-		private Label label11;
+		private LabelEx label11;
+		public TextBoxEx textBox_fonttype;
+		public TextBoxEx textBox_outputfolder;
+		private RadioButton radioButton_text_grayscale;
+		private Button button_batch;
+		private TrackBar trackBar1;
+		private LabelEx labelEx1;
+		private LabelEx labelEx2;
+		private LabelEx labelEx_trackbar_value;
+		private TrackBar trackBar_labelcount_min;
+		private TrackBar trackBar_labelcount_max;
+		private LabelEx labelEx_trackbar_value_min;
+		private LabelEx labelEx_trackbar_value_max;
+		private LabelEx labelEx3;
 	}
 }
