@@ -33,15 +33,15 @@ The syntax is 1 type per line, saved in csv like format:
 width;height;font name;font size;foreground_type;custom_foreground;\nbackground_type;custom_background;count;starti;AA_type         
     
 So for example:  
-1440;1152;PUBLIC PIXEL;20;1;#000000;1;#000000;40;0;2
-1440;1152;PUBLIC PIXEL;36;1;#000000;1;#000000;40;40;2
-1440;1152;PUBLIC PIXEL;36;2;#FFFFFF;2;#0080FF;20;80;2
-1440;1152;Arial;36;1;#000000;1;#000000;40;100;2
-1440;1152;Arial;36;2;#FFFFFF;2;#0080FF;20;140;2
-1440;1152;Times New Roman;36;2;#000000;2;#FFFFFF;20;160;2
-1440;1152;Times New Roman;36;2;#333333;2;#BBBBBB;20;180;2
-1440;1152;Times New Roman;36;2;#333333;1;#000000;20;200;2
-1440;1152;Times New Roman;36;1;#000000;1;#000000;20;220;2      
+1440;1152;PUBLIC PIXEL;20;1;#000000;1;#000000;40;0;2     
+1440;1152;PUBLIC PIXEL;36;1;#000000;1;#000000;40;40;2         
+1440;1152;PUBLIC PIXEL;36;2;#FFFFFF;2;#0080FF;20;80;2        
+1440;1152;Arial;36;1;#000000;1;#000000;40;100;2        
+1440;1152;Arial;36;2;#FFFFFF;2;#0080FF;20;140;2         
+1440;1152;Times New Roman;36;2;#000000;2;#FFFFFF;20;160;2         
+1440;1152;Times New Roman;36;2;#333333;2;#BBBBBB;20;180;2         
+1440;1152;Times New Roman;36;2;#333333;1;#000000;20;200;2          
+1440;1152;Times New Roman;36;1;#000000;1;#000000;20;220;2                
 
 foreground_type: 0 is random, 1 is random++ and 2 is custom    
 AA_type: No AA is 2, Cleartype is 5 and Grayscale AA is 3
